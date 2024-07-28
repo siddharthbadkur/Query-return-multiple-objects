@@ -5,10 +5,10 @@ from .models import Student
 # Create your views here.
 def home(request):
     # all()
-    # data = Student.objects.all()
-    # data1 = data.values()
-    # print(data1)
-    # return HttpResponse(data1)
+    data = Student.objects.all()
+    data1 = data.values()
+    print(data1)
+    return HttpResponse(data1)
     
     
     # # filter(**kwargs)
@@ -24,10 +24,10 @@ def home(request):
     # order_by()
     # data=Student.objects.order_by('stu_city') # bydefault assendind order
     # data=Student.objects.order_by('-stu_city') # desending order
-    data=Student.objects.order_by('?') # arrenge in rendom manner in everyclick
+    # data=Student.objects.order_by('?') # arrenge in rendom manner in everyclick
     # data=Student.objects.order_by('stu_name').order_by('stu_city').order_by('stu_email') # introduce Q object 
-    data1 = data.values()
-    return HttpResponse(data1)
+    # data1 = data.values()
+    # return HttpResponse(data1)
 
     ## reverse()
     # data=Student.objects.order_by('id').reverse()
